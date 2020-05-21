@@ -43,10 +43,10 @@ router.post('/login', (req, res) => {
 		.catch(err => res.status(500).json({ message: "Error logging in", error: err }))
 })
 
+const secret = process.env.JWT_SECRET || 'keep it secret, keep it safe!'
 
 function getJwtToken(username) {
 	const payload = { username };
-	const secret = process.env.JWT_SECRET;
 	const options = { expiresIn: '1d' };
 
 	return jwt.sign(payload, secret, options)
