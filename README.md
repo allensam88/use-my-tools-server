@@ -1,8 +1,11 @@
 # Use My Tools API
 
+### Server originally built by Travis Laudahl in November 2019.
+### Forked by Sam Allen in May 2020 and deployed on Heroku with minor modifications.
+
 ## Documentation
 
-### `GET https://use-my-tool.herokuapp.com/tools`
+### `GET https://use-my-tools-sam.herokuapp.com/tools`
 
 returns all the tools in the database, response ex:
 
@@ -14,7 +17,7 @@ returns all the tools in the database, response ex:
         "Location": "somewhere" 
     }
 
-### `POST https://use-my-tool.herokuapp.com/tools`
+### `POST https://use-my-tools-sam.herokuapp.com/tools`
 Adds a new tool to the database, request body should look like: 
 
     {
@@ -23,7 +26,7 @@ Adds a new tool to the database, request body should look like:
         ownerId: 2
     }
 
-### `PUT https://use-my-tool.herokuapp.com/tools/update/:id`
+### `PUT https://use-my-tools-sam.herokuapp.com/tools/update/:id`
 Update the tool with that ID in the database. To change the price and name of the tool pass in:
 
     {
@@ -31,7 +34,7 @@ Update the tool with that ID in the database. To change the price and name of th
         name: "Sawzall"
     }
 
-### `GET https://use-my-tool.herokuapp.com/users`
+### `GET https://use-my-tools-sam.herokuapp.com/users`
 returns all the users in the database, response ex:
 
     {
@@ -45,7 +48,7 @@ returns all the users in the database, response ex:
         "location": "somewhere"
     }
 
-### `GET https://use-my-tool.herokuapp.com/users/:id`
+### `GET https://use-my-tools-sam.herokuapp.com/users/:id`
 returns that specific user in the database, response ex:
 
     {
@@ -72,7 +75,7 @@ returns that specific user in the database, response ex:
       ]
     }
 
-### `PUT https://use-my-tool.herokuapp.com/users/:id`
+### `PUT https://use-my-tools-sam.herokuapp.com/users/:id`
 Updates the user with that ID in the database, to change location send:
 
     {
@@ -86,7 +89,7 @@ or to change the username **and** location
         location: "Minneapolis
     }
 
-### `POST https://use-my-tool.herokuapp.com/api/auth/register`
+### `POST https://use-my-tools-sam.herokuapp.com/api/auth/register`
 Register a new user in the database, must pass in a **username**, **password**, and a **location**. ex:
 
     {
@@ -95,7 +98,7 @@ Register a new user in the database, must pass in a **username**, **password**, 
         location: "Minnesota"
     }
 
-### `POST https://use-my-tool.herokuapp.com/api/auth/login`
+### `POST https://use-my-tools-sam.herokuapp.com/api/auth/login`
 
 Login and get a token back from the database.
 
@@ -112,6 +115,6 @@ and the response will be:
     }
     
     
-### `DELETE https://use-my-tool.herokuapp.com/tools/:id`
+### `DELETE https://use-my-tools-sam.herokuapp.com/tools/:id`
 
 Delete a specific tool from the database
